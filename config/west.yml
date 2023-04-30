@@ -2,12 +2,12 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: genkobar
-      url-base: https://github.com/genkobar
+    - name: DiogoDoreto
+      url-base: https://github.com/DiogoDoreto
   projects:
     - name: zmk
-      remote: genkobar
-      revision: split-encoder
+      remote: DiogoDoreto
+      revision: waterfowl-encoders
       import: app/west.yml
   self:
     path: config
