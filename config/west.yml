@@ -3,7 +3,7 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: genkobar
-      url-base: https://github.com/genkobar/zmk.git
+      url-base: https://github.com/genkobar
   projects:
     - name: zmk
       remote: genkobar
