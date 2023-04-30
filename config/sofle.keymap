@@ -93,6 +93,28 @@
                 , <&macro_release &kp LSHFT>
                 ;
         };
+
+        ctrl_z: ctrl_z {
+            label = "ZM_ctrl_z";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp X>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        ctrl_y: ctrl_y {
+            label = "ZM_ctrl_y";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp Y>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
     };
 };
 
@@ -119,7 +141,7 @@
 						&kp N1 &kp LALT  &al 1 INS &kp DEL  &kp RET  &kp SPACE &kp BSPC &al 2 RALT &kp RALT &kp N1
 			>;
 
-			sensor-bindings = <&inc_dec_kp LEFT RIGHT &inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
+			sensor-bindings = <&inc_dec_kp ctrl_z ctrl_y &inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
 		};
 
 		lower_layer {
