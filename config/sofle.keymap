@@ -50,6 +50,43 @@
 
 
 / {
+    macros {
+        shift_ins: shift_ins {
+            label = "ZM_shift_ins";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp INS>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+
+        ctrl_z: ctrl_z {
+            label = "ZM_ctrl_z";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp X>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        ctrl_y: ctrl_y {
+            label = "ZM_ctrl_y";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp Y>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+    };
+};
+
+/ {
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -90,42 +127,7 @@
     };
 };
 
-/ {
-    macros {
-        shift_ins: shift_ins {
-            label = "ZM_shift_ins";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp INS>
-                , <&macro_release &kp LSHFT>
-                ;
-        };
 
-        ctrl_z: ctrl_z {
-            label = "ZM_ctrl_z";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp X>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
-
-        ctrl_y: ctrl_y {
-            label = "ZM_ctrl_y";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp Y>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
-    };
-};
 
 
 
