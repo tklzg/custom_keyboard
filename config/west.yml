@@ -7,9 +7,9 @@ manifest:
     - name: tklzg
       url-base: https://github.com/tklzg
   projects:
-    - name: zmk
+    - name: zmk_test
       remote: tklzg
-      revision: main
+      revision: waterfowl-encoders
       import: app/west.yml
   self:
     path: config
