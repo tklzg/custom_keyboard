@@ -5,7 +5,7 @@ manifest:
   projects:
     - name: zmk
       remote: tklzg
-      revision: main
+      revision: master
       import: app/west.yml
   self:
     path: config
