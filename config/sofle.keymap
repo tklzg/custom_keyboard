@@ -116,13 +116,14 @@
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
         };
-
+/*
         rot_kp: rot_kp {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENC_KP";
             #sensor-binding-cells = <0>;
             bindings = <&ctrl_z>, <&ctrl_y>;
         };
+        */
     };
 };
 
@@ -148,7 +149,7 @@
 						&kp N1 &kp LALT  &al 1 INS &kp DEL  &kp RET  &kp SPACE &kp BSPC &al 2 RALT &kp RALT &kp N2
 			>;
 
-			sensor-bindings = <&rot_kp &inc_dec_kp N1 N2>;
+			sensor-bindings = <&inc_dec_kp N1 N2 &inc_dec_kp N1 N2>;
 		};
 
 		lower_layer {
