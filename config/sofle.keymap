@@ -149,7 +149,7 @@
 						&kp N1 &kp LALT  &al 1 INS &kp DEL  &kp RET  &kp SPACE &kp BSPC &al 2 RALT &kp RALT &kp N2
 			>;
 
-			sensor-bindings = <&inc_dec_kp N1 N2 &inc_dec_kp N1 N2>;
+			sensor-bindings = <&inc_dec_kp N3 N2 &inc_dec_kp N1 N2>;
 		};
 
 		lower_layer {
