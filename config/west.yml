@@ -6,8 +6,8 @@ manifest:
       url-base: https://github.com/DiogoDoreto
   projects:
     - name: zmk
-      remote: DiogoDoreto
-      revision: waterfowl-encoders
+      remote: zmkfirmware//DiogoDoreto
+      revision: master//waterfowl-encoders
       import: app/west.yml
   self:
     path: config
