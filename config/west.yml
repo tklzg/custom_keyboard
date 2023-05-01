@@ -4,10 +4,12 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: DiogoDoreto
       url-base: https://github.com/DiogoDoreto
+    - name: tklzg
+      url-base: https://github.com/tklzg
   projects:
     - name: zmk
-      remote: DiogoDoreto
-      revision: waterfowl-encoders
+      remote: tklzg
+      revision: main
       import: app/west.yml
   self:
     path: config
