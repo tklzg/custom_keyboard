@@ -5,7 +5,7 @@ manifest:
   projects:
     - name: zmk_test
       remote: tklzg
-      revision: waterfowl-encoders
+      revision: main
       import: app/west.yml
   self:
     path: config
