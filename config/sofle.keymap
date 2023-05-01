@@ -116,13 +116,13 @@
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
         };
-
+/*
         rot_kp: behavior_sensor_rotate_key_press {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENC_KP";
             #sensor-binding-cells = <0>;
             bindings = <&ctrl_z>, <&ctrl_y>;
-        };
+        };*/
     };
 };
 
