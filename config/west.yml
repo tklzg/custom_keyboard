@@ -3,9 +3,9 @@ manifest:
     - name: tklzg
       url-base: https://github.com/tklzg
   projects:
-    - name: zmk
+    - name: zmk_test
       remote: tklzg
-      revision: master
+      revision: main
       import: app/west.yml
   self:
     path: config
