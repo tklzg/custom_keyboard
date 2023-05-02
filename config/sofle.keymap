@@ -129,7 +129,7 @@
             compatible = "zmk,behavior-sensor-rotate-var";
             label = "ENC_RKP";
             #sensor-binding-cells = <2>;
-            bindings = <&mkp>, <&mkp>;
+            bindings = <&mwh>, <&mwh>;
         };
         
     };
@@ -154,10 +154,10 @@
 &kp LCTRL &kp A  &kp S  &kp D    &kp F    &kp G                      &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
 &kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B &kp LBKT   &kp RBKT &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &se RSHFT RET 
 
-						&mkp RCLK &kp LALT  &al 1 INS &kp DEL  &kp RET  &kp SPACE &kp BSPC &al 2 RALT &kp RALT &mwh SCROLL_UP
+						&mkp RCLK &kp LALT  &al 1 INS &kp DEL  &kp RET  &kp SPACE &kp BSPC &al 2 RALT &kp RALT &mwh SCROLL_DOWN
 			>;
 
-			sensor-bindings = <&rot_lkp &inc_dec_kp N1 N2>;
+			sensor-bindings = <&rot_rkp SCROLL_UP SCROLL_DOWN &inc_dec_kp N1 N2>;
 		};
 
 		lower_layer {
