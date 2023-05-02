@@ -117,14 +117,21 @@
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
         };
-/*
-        rot_kp: rot_kp {
+
+        rot_lkp: rot_lkp {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENC_KP";
             #sensor-binding-cells = <0>;
             bindings = <&ctrl_z>, <&ctrl_y>;
         };
-        */
+
+        rot_rkp: rot_rkp {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "ENC_KP";
+            #sensor-binding-cells = <2>;
+            bindings = <&mwh>, <&mwh>;
+        };
+        
     };
 };
 
@@ -150,7 +157,7 @@
 						&mkp RCLK &kp LALT  &al 1 INS &kp DEL  &kp RET  &kp SPACE &kp BSPC &al 2 RALT &kp RALT &mwh SCROLL_UP
 			>;
 
-			sensor-bindings = <&inc_dec_kp N3 N2 &inc_dec_kp N1 N3>;
+			sensor-bindings = <&rot_lkp &rot_rkp SCROLL_UP SCROLL_DOWN>;
 		};
 
 		lower_layer {
