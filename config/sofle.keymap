@@ -137,7 +137,7 @@
 
         rot_mmv: rot_mmv {
             compatible = "zmk,behavior-sensor-rotate-var";
-            label = "ENC_RKP";
+            label = "ENC_RMV";
             #sensor-binding-cells = <2>;
             bindings = <&mmv>, <&mmv>;
         };
