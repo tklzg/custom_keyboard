@@ -11,6 +11,9 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/mouse.h>
 
+&left_encoder { resolution = <2>; };
+&right_encoder { resolution = <2>; };
+
 /*
 / {
 	combos {
