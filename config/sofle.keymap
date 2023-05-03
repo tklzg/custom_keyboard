@@ -11,8 +11,8 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/mouse.h>
 
-&left_encoder { resolution = <1>; };
-&right_encoder { resolution = <2>; };
+&left_encoder { resolution = <4>; };
+&right_encoder { resolution = <1>; };
 
 /*
 / {
@@ -166,7 +166,7 @@
 						&mwh SCROLL_UP &kp LALT  &mo 1 &kp DEL  &kp RET  &kp SPACE &kp BSPC &al 2 RALT &kp RALT &mwh SCROLL_DOWN
 			>;
 
-			sensor-bindings = <&rot_rkp SCROLL_UP SCROLL_DOWN &rot_lkp>;
+			sensor-bindings = <&rot_lkp &rot_rkp SCROLL_UP SCROLL_DOWN>;
 		};
 
 		lower_layer {
