@@ -160,7 +160,7 @@
 						&mkp RCLK &kp LALT  &al 1 INS &kp DEL  &kp RET  &kp SPACE &kp BSPC &al 2 RALT &kp RALT &mwh SCROLL_DOWN
 			>;
 
-			sensor-bindings = < &inc_dec_kp N1 N2 &rot_rkp SCROLL_UP SCROLL_DOWN>;
+			sensor-bindings = < &rot_lkp &rot_rkp SCROLL_UP SCROLL_DOWN>;
 		};
 
 		lower_layer {
