@@ -185,7 +185,7 @@
                                      &trans &trans         &trans            &trans       &trans    &trans   &trans    &trans    &trans    &trans
 			>;
 
-			sensor-bindings = <&rot_mmv MOVE_LEFT MOVE_RIGHT &rot_mmv+ MOVE_UP MOVE_DOWN>;
+			sensor-bindings = <&rot_mmv MOVE_LEFT MOVE_RIGHT &rot_mmv MOVE_UP MOVE_DOWN>;
 		};
 
 		raise_layer {
