@@ -134,6 +134,13 @@
             #sensor-binding-cells = <2>;
             bindings = <&mwh>, <&mwh>;
         };
+
+        rot_mmv: rot_mmv {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "ENC_RKP";
+            #sensor-binding-cells = <2>;
+            bindings = <&mmv>, <&mmv>;
+        };
         
     };
 };
@@ -157,10 +164,10 @@
 &kp LCTRL &kp A  &kp S  &kp D    &kp F    &kp G                      &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
 &kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B &kp LBKT   &kp RBKT &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &se RSHFT RET 
 
-						&mkp RCLK &kp LALT  &al 1 INS &kp DEL  &kp RET  &kp SPACE &kp BSPC &al 2 RALT &kp RALT &mwh SCROLL_DOWN
+						&mwh SCROLL_UP &kp LALT  &al 1 INS &kp DEL  &kp RET  &kp SPACE &kp BSPC &al 2 RALT &kp RALT &mwh SCROLL_DOWN
 			>;
 
-			sensor-bindings = < &rot_lkp &rot_rkp SCROLL_UP SCROLL_DOWN>;
+			sensor-bindings = <&rot_lkp &rot_rkp SCROLL_UP SCROLL_DOWN>;
 		};
 
 		lower_layer {
@@ -178,7 +185,7 @@
                                      &trans &trans         &trans            &trans       &trans    &trans   &trans    &trans    &trans    &trans
 			>;
 
-			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+			sensor-bindings = <&rot_mmv MOVE_LEFT MOVE_RIGHT &rot_mmv+ MOVE_UP MOVE_DOWN>;
 		};
 
 		raise_layer {
