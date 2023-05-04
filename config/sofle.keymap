@@ -178,7 +178,7 @@
 //                     |      |      |      |        |  |       |      |       |       |
 			bindings = <
 &bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                 &trans    &trans    &trans          &trans    &trans    &trans
-&kp F1     &kp F2           &kp F3            &kp F4            &kp F5       &kp F6                       &kp F7    &kp F8    &mmv MOVE_UP          &kp F10   &kp F11   &kp F12
+&kp F1     &kp F2           &kp F3            &kp F4            &kp F5       &kp F6                       &kp F7    &mkp LCLK    &mmv MOVE_UP  &mkp RCLK   &kp F11   &kp F12
 &kp GRAVE  &kp EXCL         &kp AT            &kp HASH          &kp DOLLAR   &kp PRCNT                    &kp CARET &mmv MOVE_LEFT  &mmv MOVE_DOWN &mmv MOVE_RIGHT  &kp RPAR  &kp TILDE
 &trans     &ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG &out OUT_USB &out OUT_BLE    &shift_ins   &trans    &trans    &kp MINUS &kp KP_PLUS     &kp LBRC  &kp RBRC  &kp PIPE
                                      &trans &trans         &trans            &trans       &trans    &trans   &trans    &trans    &trans    &trans
@@ -196,9 +196,9 @@
 //                     | ALT  | DEL  | ENTER| 		 |  | 		| SPACE| BSPC  | ALT   |
 			bindings = <
 &trans    &kp F1 &kp F2 &kp F3 &kp F4  &kp F5                       &kp F6   &kp F7   &kp F8 &kp F9 &kp F10 &kp F11
-&kp GRAVE &kp N1 &kp N2 &kp N3  &kp N4  &kp N5                       &kp N6      &kp HOME    &kp UP    &kp END   &kp N0    &kp F12
-&kp LCTRL    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &trans      &kp LEFT  &kp DOWN  &kp RIGHT   &kp RIGHT &trans
-&kp LSHFT    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &trans  &trans  &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT &kp BSLH  &kp LSHFT
+&kp GRAVE &kp N1 &kp N2 &kp N3  &kp N4  &kp N5                      &kp PG_UP  &kp HOME  &kp UP    &kp END   &kp N0    &kp F12
+&kp LCTRL    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                   &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT &kp RIGHT &trans
+&kp LSHFT    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &trans  &trans  &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT  &kp BSLH  &kp LSHFT
                        &kp N1 &kp LALT &kp DEL &kp RET  &trans  &trans  &kp SPACE  &kp BSPC &kp RALT &kp N1
 			>;
 
