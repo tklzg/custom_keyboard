@@ -150,12 +150,21 @@
             bindings = <&ctrl_z>, <&ctrl_y>;
         };
 
+        rot_lkp_b: rot_lkp_b {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENC_LKP_BACK";
+            #sensor-binding-cells = <0>;
+            bindings = <&ctrl_back>, <&ctrl_sh_back>;
+        };
+
         rot_rkp: rot_rkp {
             compatible = "zmk,behavior-sensor-rotate-var";
             label = "ENC_RKP";
             #sensor-binding-cells = <2>;
             bindings = <&mwh>, <&mwh>;
         };
+
+
         rot_mmv: rot_mmv {
             compatible = "zmk,behavior-sensor-rotate-var";
             label = "ENC_RMV";
@@ -188,7 +197,7 @@
 						&mwh SCROLL_UP &kp LALT  &mo 1 &kp DEL  &kp RET  &kp SPACE &kp BSPC &al 2 RALT &kp RALT &mwh SCROLL_DOWN
 			>;
 
-			sensor-bindings = <&rot_lkp &inc_dec_kp LEFT RIGHT>;
+			sensor-bindings = <&rot_lkp_b &inc_dec_kp LEFT RIGHT>;
 		};
 
 		lower_layer {
