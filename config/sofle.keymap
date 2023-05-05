@@ -110,6 +110,50 @@
                 , <&macro_release &kp LCTRL &kp LSHIFT>
                 ;
         };
+
+        alt_ctrl_del: alt_ctrl_del {
+            label = "ZM_alt_ctrl_del";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL &kp LALT>
+                , <&macro_tap &kp DEL>
+                , <&macro_release &kp LCTRL &kp LALT>
+                ;
+        };
+
+        alt_f4: alt_f4 {
+            label = "ZM_alt_f4";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp F4>
+                , <&macro_release &kp LALT>
+                ;
+        };
+
+        alt_enter: alt_enter {
+            label = "ZM_alt_enter";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp ENTER>
+                , <&macro_release &kp LALT>
+                ;
+        };
+
+        alt_tab: alt_tab {
+            label = "ZM_alt_tab";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp TAB>
+                , <&macro_release &kp LALT>
+                ;
+        };
     };
 };
 
@@ -208,11 +252,11 @@
 // |       |     |     |      |      |      | SH+INS |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
 //                     |      |      |      |        |  |       |      |       |       |
 			bindings = <
-&bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                 &trans    &trans    &trans          &trans    &trans    &trans
-&kp F1     &kp F2           &kp F3            &kp F4            &kp F5       &kp F6                       &kp F7    &mkp LCLK    &mmv MOVE_UP  &mkp RCLK   &kp F11   &kp F12
+&bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &alt_f4 &bt BT_SEL 4                 &trans    &trans    &trans          &trans    &trans    &trans
+&alt_tab     &kp F2           &kp F3            &kp F4            &kp F5       &kp F6                       &kp F7    &mkp LCLK    &mmv MOVE_UP  &mkp RCLK   &kp F11   &kp F12
 &kp GRAVE  &kp EXCL         &kp AT            &kp HASH          &kp DOLLAR   &kp PRCNT                    &kp CARET &mmv MOVE_LEFT  &mmv MOVE_DOWN &mmv MOVE_RIGHT  &kp RPAR  &kp TILDE
 &trans     &ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG &out OUT_USB &out OUT_BLE    &shift_ins   &trans    &trans    &kp MINUS &kp KP_PLUS     &kp LBRC  &kp RBRC  &kp PIPE
-                                     &trans &trans         &trans            &trans       &trans    &trans   &trans    &trans    &trans    &trans
+                                     &trans &trans         &trans            &alt_ctrl_del       &alt_enter    &trans   &trans    &trans    &trans    &trans
 			>;
 
 			sensor-bindings = <&rot_mmv MOVE_LEFT MOVE_RIGHT &rot_mmv MOVE_UP MOVE_DOWN>;
