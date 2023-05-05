@@ -88,6 +88,28 @@
                 , <&macro_release &kp LCTRL>
                 ;
         };
+
+        ctrl_back: ctrl_back {
+            label = "ZM_ctrl_back";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL> 
+                , <&macro_tap &kp MINUS>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        ctrl_sh_back: ctrl_sh_back {
+            label = "ZM_ctrl_sh_back";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL &kp LSHIFT>
+                , <&macro_tap &kp MINUS>
+                , <&macro_release &kp LCTRL &kp LSHIFT>
+                ;
+        };
     };
 };
 
