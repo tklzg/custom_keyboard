@@ -111,6 +111,28 @@
                 ;
         };
 
+        ctrl_tab: ctrl_tab {
+            label = "ZM_ctrl_tab";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL> 
+                , <&macro_tap &kp TAB>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        ctrl_sh_tab: ctrl_sh_tab {
+            label = "ZM_ctrl_sh_tab";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL &kp LSHIFT>
+                , <&macro_tap &kp TAB>
+                , <&macro_release &kp LCTRL &kp LSHIFT>
+                ;
+        };
+
         alt_ctrl_del: alt_ctrl_del {
             label = "ZM_alt_ctrl_del";
             compatible = "zmk,behavior-macro";
@@ -201,6 +223,13 @@
             bindings = <&ctrl_back>, <&ctrl_sh_back>;
         };
 
+        rot_lkp_t: rot_lkp_t {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENC_LKP_TAB";
+            #sensor-binding-cells = <0>;
+            bindings = <&ctrl_tab>, <&ctrl_sh_tab>;
+        };
+
         rot_rkp: rot_rkp {
             compatible = "zmk,behavior-sensor-rotate-var";
             label = "ENC_RKP";
@@ -277,7 +306,7 @@
                        &kp N1 &kp LALT &kp DEL &kp RET  &trans  &trans  &kp SPACE  &kp BSPC &kp RALT &kp N1
 			>;
 
-			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+			sensor-bindings = <&rot_lkp_t &inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
 	};
 };
