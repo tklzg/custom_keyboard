@@ -288,7 +288,7 @@
                                      &trans &trans         &trans            &alt_ctrl_del       &alt_enter    &trans   &trans    &trans    &trans    &trans
 			>;
 
-			sensor-bindings = <&inc_dec_kp K_UNDO K_REDO &inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+			sensor-bindings = <&rot_lkp &rot_rkp SCROLL_UP SCROLL_DOWN>;
 		};
 
 		raise_layer {
@@ -306,7 +306,7 @@
                        &kp N1 &kp LALT &kp DEL &kp RET  &trans  &trans  &kp SPACE  &kp BSPC &kp RALT &kp C_MUTE
 			>;
 
-			sensor-bindings = <&inc_dec_kp C_KBIA_NEXT C_KBIA_PREV &inc_dec_kp C_VOL_UP C_VOL_DN>;
+			sensor-bindings = <&rot_lkp_t &inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
 	};
 };
