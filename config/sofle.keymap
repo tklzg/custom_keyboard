@@ -89,6 +89,39 @@
                 ;
         };
 
+        ctrl_x: ctrl_x {
+            label = "ZM_ctrl_x";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp X>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        ctrl_c: ctrl_c {
+            label = "ZM_ctrl_c";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp C>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        ctrl_v: ctrl_v {
+            label = "ZM_ctrl_v";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp V>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
 
         ctrl_back: ctrl_back {
             label = "ZM_ctrl_back";
@@ -209,29 +242,6 @@
     };
 
 };
-
-
-ZMK_MACRO(ctrl_x,
-        bindings
-            = <&macro_press &kp LCTRL>
-            , <&macro_tap &kp X>
-            , <&macro_release &kp LCTRL>
-            ;
-    )
-    ZMK_MACRO(ctrl_c,
-        bindings
-            = <&macro_press &kp LCTRL>
-            , <&macro_tap &kp C>
-            , <&macro_release &kp LCTRL>
-            ;
-    )
-    ZMK_MACRO(ctrl_v,
-        bindings
-            = <&macro_press &kp LCTRL>
-            , <&macro_tap &kp V>
-            , <&macro_release &kp LCTRL>
-            ;
-    )
 
     
 
