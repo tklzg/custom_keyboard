@@ -89,6 +89,7 @@
                 ;
         };
 
+
         ctrl_back: ctrl_back {
             label = "ZM_ctrl_back";
             compatible = "zmk,behavior-macro";
@@ -213,7 +214,7 @@
     tap-ms = <0>;
         bindings
             = <&macro_press &kp LCTRL>
-            , <&macro_tap &kp V>
+            , <&macro_tap &kp X>
             , <&macro_release &kp LCTRL>
             ;
     )
@@ -222,7 +223,7 @@
     tap-ms = <0>;
         bindings
             = <&macro_press &kp LCTRL>
-            , <&macro_tap &kp c>
+            , <&macro_tap &kp C>
             , <&macro_release &kp LCTRL>
             ;
     )
@@ -231,7 +232,7 @@
     tap-ms = <0>;
         bindings
             = <&macro_press &kp LCTRL>
-            , <&macro_tap &kp v>
+            , <&macro_tap &kp V>
             , <&macro_release &kp LCTRL>
             ;
     )
@@ -342,7 +343,7 @@
 &alt_tab     &kp F2           &kp F3            &kp F4            &kp F5       &kp F6                       &kp F7    &mkp LCLK    &mmv MOVE_UP  &mkp RCLK   &kp F11   &kp F12
 &kp GRAVE  &kp EXCL         &kp AT            &c_v_hom_bs         &c_v_hom_del   &out OUT_USB                    &kp CARET &mmv MOVE_LEFT  &mmv MOVE_DOWN &mmv MOVE_RIGHT  &kp RPAR  &kp TILDE
 &trans     &ctrl_z         &ctrl_x           &ctrl_c           &ctrl_v           &out OUT_BLE    &shift_ins   &trans    &ext_power EP_OFF    &ext_power EP_ON &kp KP_PLUS     &kp LBRC  &kp RBRC  &kp PIPE
-               &LGUI &trans         &trans            &alt_ctrl_del       &alt_enter                 &trans   &trans    &trans    &trans    &trans
+                            &LGUI          &trans             &trans           &alt_ctrl_del      &alt_enter       &trans   &trans    &trans    &trans    &trans
 			>;
 
 			sensor-bindings = <&rot_lkp &inc_dec_kp PG_UP PG_DN>;
