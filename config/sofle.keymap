@@ -209,6 +209,8 @@
 };
 
     ZMK_MACRO(ctrl_x,
+    wait-ms = <0>;
+    tap-ms = <0>;
         bindings
             = <&macro_press &kp LCTRL>
             , <&macro_tap &kp V>
@@ -216,6 +218,8 @@
             ;
     )
     ZMK_MACRO(ctrl_c,
+    wait-ms = <0>;
+    tap-ms = <0>;
         bindings
             = <&macro_press &kp LCTRL>
             , <&macro_tap &kp c>
@@ -223,6 +227,8 @@
             ;
     )
     ZMK_MACRO(ctrl_v,
+    wait-ms = <0>;
+    tap-ms = <0>;
         bindings
             = <&macro_press &kp LCTRL>
             , <&macro_tap &kp v>
