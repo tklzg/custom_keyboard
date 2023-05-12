@@ -208,6 +208,28 @@
     };
 };
 
+    ZMK_MACRO(ctrl_x,
+        bindings
+            = <&macro_press &kp LCTRL>
+            , <&macro_tap &kp V>
+            , <&macro_release &kp LCTRL>
+            ;
+    )
+    ZMK_MACRO(ctrl_c,
+        bindings
+            = <&macro_press &kp LCTRL>
+            , <&macro_tap &kp c>
+            , <&macro_release &kp LCTRL>
+            ;
+    )
+    ZMK_MACRO(ctrl_v,
+        bindings
+            = <&macro_press &kp LCTRL>
+            , <&macro_tap &kp v>
+            , <&macro_release &kp LCTRL>
+            ;
+    )
+
 / {
     behaviors {
         hm: homerow_mods {
@@ -304,17 +326,17 @@
 
 		lower_layer {
 // ------------------------------------------------------------------------------------------------------------
-// | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
-// |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-// |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
-// |       |     |     |      |      |      | SH+INS |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
-//                     |      |      |      |        |  |       |      |       |       |
+// | BTCLR | BT1  | BT2  |  BT3 |   BT4 |  BT5  |                   |      |       |       |       |       |       |
+// |Alt+Tab|  F2  |  F3  |  F4  |   F5  |  F6   |                   |  F7  |L_CLICK|  UP   |R_CLICK|  F11  |  F12  |
+// |   `   |  !   |  @   | C_BS | C_Del | M_USB |                   |  ^   |  LEFT |  DOWN |  RIGHT|   )   |   ~   |
+// | SHIFT | Ctr+Z| Ctr+X| Ctr+C| Ctr+V | M_BT  | SH+INS |  |       |EX_OFF| EX_ON |  +    |   {   |   }   |  "|"  |
+//                | LGUI | ALT  |       |A_C_Del| Al+Ent |  |       |      |       |       |       |
 			bindings = <
 &bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &alt_f4 &bt BT_SEL 4                 &trans    &trans    &trans          &trans    &trans    &trans
 &alt_tab     &kp F2           &kp F3            &kp F4            &kp F5       &kp F6                       &kp F7    &mkp LCLK    &mmv MOVE_UP  &mkp RCLK   &kp F11   &kp F12
-&kp GRAVE  &kp EXCL         &kp AT            &c_v_hom_bs         &c_v_hom_del   &kp PRCNT                    &kp CARET &mmv MOVE_LEFT  &mmv MOVE_DOWN &mmv MOVE_RIGHT  &kp RPAR  &kp TILDE
-&trans     &ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG &out OUT_USB &out OUT_BLE    &shift_ins   &trans    &trans    &kp MINUS &kp KP_PLUS     &kp LBRC  &kp RBRC  &kp PIPE
-                                     &trans &trans         &trans            &alt_ctrl_del       &alt_enter    &trans   &trans    &trans    &trans    &trans
+&kp GRAVE  &kp EXCL         &kp AT            &c_v_hom_bs         &c_v_hom_del   &out OUT_USB                    &kp CARET &mmv MOVE_LEFT  &mmv MOVE_DOWN &mmv MOVE_RIGHT  &kp RPAR  &kp TILDE
+&trans     &ctrl_z         &ctrl_x           &ctrl_c           &ctrl_v           &out OUT_BLE    &shift_ins   &trans    &ext_power EP_OFF    &ext_power EP_ON &kp KP_PLUS     &kp LBRC  &kp RBRC  &kp PIPE
+               &LGUI &trans         &trans            &alt_ctrl_del       &alt_enter                 &trans   &trans    &trans    &trans    &trans
 			>;
 
 			sensor-bindings = <&rot_lkp &inc_dec_kp PG_UP PG_DN>;
