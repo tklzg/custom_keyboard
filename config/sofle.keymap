@@ -177,6 +177,18 @@
                 ;
         };
 
+        c_v_hom_del: c_v_hom_del {
+            label = "ZM_c_v_hom_del";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp V>
+                , <&macro_release &kp LCTRL>
+                , <&macro_tap &kp HOME &kp DEL>
+                ;
+        };
+
         c_v_hom_bs: c_v_hom_bs {
             label = "ZM_c_v_hom_bs";
             compatible = "zmk,behavior-macro";
@@ -185,7 +197,11 @@
                 = <&macro_press &kp LCTRL>
                 , <&macro_tap &kp V>
                 , <&macro_release &kp LCTRL>
-                , <&macro_tap &kp HOME &kp DEL>
+                , <&macro_tap &kp HOME &kp RIGHT &kp RIGHT &kp RIGHT>
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp RIGHT>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp DEL>
                 ;
         };
        
@@ -296,7 +312,7 @@
 			bindings = <
 &bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &alt_f4 &bt BT_SEL 4                 &trans    &trans    &trans          &trans    &trans    &trans
 &alt_tab     &kp F2           &kp F3            &kp F4            &kp F5       &kp F6                       &kp F7    &mkp LCLK    &mmv MOVE_UP  &mkp RCLK   &kp F11   &kp F12
-&kp GRAVE  &kp EXCL         &kp AT            &kp HASH          &c_v_hom_bs   &kp PRCNT                    &kp CARET &mmv MOVE_LEFT  &mmv MOVE_DOWN &mmv MOVE_RIGHT  &kp RPAR  &kp TILDE
+&kp GRAVE  &kp EXCL         &kp AT            &kp HASH          &c_v_hom_del   &kp PRCNT                    &kp CARET &mmv MOVE_LEFT  &mmv MOVE_DOWN &mmv MOVE_RIGHT  &kp RPAR  &kp TILDE
 &trans     &ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG &out OUT_USB &out OUT_BLE    &shift_ins   &trans    &trans    &kp MINUS &kp KP_PLUS     &kp LBRC  &kp RBRC  &kp PIPE
                                      &trans &trans         &trans            &alt_ctrl_del       &alt_enter    &trans   &trans    &trans    &trans    &trans
 			>;
