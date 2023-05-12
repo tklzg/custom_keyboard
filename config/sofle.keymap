@@ -185,7 +185,7 @@
                 = <&macro_press &kp LCTRL>
                 , <&macro_tap &kp V>
                 , <&macro_release &kp LCTRL>
-                , <&macro_tap &kp Home &kp BSPC>
+                , <&macro_tap &kp HOME &kp BSPC>
                 ;
         };
        
