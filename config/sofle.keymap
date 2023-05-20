@@ -339,7 +339,7 @@
 						&kp LBKT &kp LALT  &mo 1 &kp DEL  &kp RET  &kp SPACE &kp BSPC &al 2 RALT &kp C_MUTE &kp RBKT
 			>;
 
-			sensor-bindings = <&rot_lkp_b &inc_dec_kp N1 N2 &inc_dec_kp N3 N4 &inc_dec_kp N5 N6>;
+			sensor-bindings = <&rot_lkp_b &rot_lkp_t &inc_dec_kp RIGHT LEFT &inc_dec_kp PG_UP PG_DN>;
 		};
 
 		lower_layer {
