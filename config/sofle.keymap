@@ -12,7 +12,7 @@
 #include <dt-bindings/zmk/mouse.h>
 
 &left_encoder { resolution = <4>; };
-&left_encoder_2 { resolution = <4>; };
+&left_encoder_2 { resolution = <1>; };
 &right_encoder { resolution = <2>; };
 &right_encoder_2 { resolution = <2>; };
 
