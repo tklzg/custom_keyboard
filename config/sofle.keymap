@@ -375,7 +375,7 @@
                        &kp N1 &kp LALT &kp DEL &kp RET  &trans  &trans  &kp SPACE  &kp BSPC &kp RALT &kp C_MUTE
 			>;
 
-			sensor-bindings = <&rot_lkp_t &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp 3 4 &inc_dec_kp 5 6>;
+			sensor-bindings = <&rot_lkp_t &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp 5 6>;
 		};
 	};
 };
