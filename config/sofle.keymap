@@ -336,7 +336,7 @@
 &kp LCTRL &kp A  &kp S  &kp D    &kp F    &kp G                      &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
 &kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B &kp N1   &kp B &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &se RSHFT RET 
 
-						&kp LBKT &kp LALT  &mo 1 &kp DEL  &kp RET  &kp SPACE &kp BSPC &al 2 RALT &kp LGUI &kp RBKT
+						&kp LBKT &kp LALT  &mo 1 &kp DEL  &kp RET  &kp SPACE &kp BSPC &al 2 RALT &hm RCTRL LGUI &kp RBKT
 			>;
 
 			sensor-bindings = <&rot_lkp_b &rot_lkp_t &inc_dec_kp RIGHT LEFT &inc_dec_kp PG_DN PG_UP>;
