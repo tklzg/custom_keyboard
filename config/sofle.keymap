@@ -338,8 +338,8 @@
 
 						&kp LBKT &kp LALT  &mo 1 &kp DEL  &kp RET  &kp SPACE &kp BSPC &al 2 RALT &hm LGUI RCTRL &kp RBKT
 			>;
-            sensor-bindings = <&inc_dec_kp N1 N2 &inc_dec_kp N3 N4 &inc_dec_kp RIGHT LEFT &inc_dec_kp PG_DN PG_UP>;
-			//sensor-bindings = <&rot_lkp_b &rot_lkp_t &inc_dec_kp RIGHT LEFT &inc_dec_kp PG_DN PG_UP>;
+            //sensor-bindings = <&inc_dec_kp N1 N2 &inc_dec_kp N3 N4 &inc_dec_kp RIGHT LEFT &inc_dec_kp PG_DN PG_UP>;
+			sensor-bindings = <&rot_lkp_b &rot_lkp_t &inc_dec_kp RIGHT LEFT &inc_dec_kp PG_DN PG_UP>;
 		};
 
 		lower_layer {
@@ -354,7 +354,7 @@
 &alt_tab     &kp F2           &kp F3            &kp F4            &kp F5       &kp F6                       &kp F7    &mkp LCLK    &mmv MOVE_UP  &mkp RCLK   &kp F11   &kp F12
 &kp GRAVE  &kp EXCL         &kp AT            &c_v_hom_bs         &c_v_hom_del   &out OUT_USB                    &kp CARET &mmv MOVE_LEFT  &mmv MOVE_DOWN &mmv MOVE_RIGHT  &kp RPAR  &kp TILDE
 &trans     &ctrl_z         &ctrl_x           &ctrl_c           &ctrl_v           &out OUT_BLE    &shift_ins   &trans    &ext_power EP_OFF    &ext_power EP_ON &kp KP_PLUS     &kp LBRC  &kp RBRC  &kp PIPE
-                            &kp LGUI          &trans             &trans           &alt_ctrl_del      &alt_enter       &trans   &trans    &trans    &trans    &trans
+                            &shift_ins          &trans             &trans           &alt_ctrl_del      &alt_enter       &trans   &trans    &trans    &trans    &trans
 			>;
 
 			sensor-bindings = <&rot_lkp &inc_dec_kp PG_UP PG_DN &inc_dec_kp 3 4 &inc_dec_kp 5 6>;
