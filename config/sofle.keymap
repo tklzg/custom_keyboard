@@ -191,6 +191,30 @@
                 ;
         };
 
+        alt_left: alt_left {
+            label = "ZM_alt_left";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp LEFT>
+                , <&macro_release &kp LALT>
+                ;
+        };
+
+        alt_right: alt_right {
+            label = "ZM_alt_right";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp RIGHT>
+                , <&macro_release &kp LALT>
+                ;
+        };
+
+        
+
         alt_enter: alt_enter {
             label = "ZM_alt_enter";
             compatible = "zmk,behavior-macro";
@@ -347,13 +371,13 @@
 // | BTCLR | BT1  | BT2  |  BT3 |   BT4 |  BT5  |                   |      |       |       |       |       |       |
 // |Alt+Tab|  F2  |  F3  |  F4  |   F5  |  F6   |                   |  F7  |L_CLICK|  UP   |R_CLICK|  F11  |  F12  |
 // |   `   |  !   |  @   | C_BS | C_Del | M_USB |                   |  ^   |  LEFT |  DOWN |  RIGHT|   )   |   ~   |
-// | SHIFT | Ctr+Z| Ctr+X| Ctr+C| Ctr+V | M_BT  | SH+INS |  |       |EX_OFF| EX_ON |  +    |   {   |   }   |  "|"  |
+// | SHIFT | Ctr+Z| Ctr+X| Ctr+C| Ctr+V | M_BT  | SH+INS |  |       |EX_OFF| EX_ON | ALT_L | ALT_R |   \   | SHIFT |
 //                | LGUI | ALT  |       |A_C_Del| Al+Ent |  |       |      |       |       |       |
 			bindings = <
 &bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &alt_f4 &bt BT_SEL 4                 &trans    &trans    &trans          &trans    &trans    &trans
 &alt_tab     &kp F2           &kp F3            &kp F4            &kp F5       &kp F6                       &kp F7    &mkp LCLK    &mmv MOVE_UP  &mkp RCLK   &kp F11   &kp F12
 &kp GRAVE  &kp EXCL         &kp AT            &c_v_hom_bs         &c_v_hom_del   &out OUT_USB                    &kp CARET &mmv MOVE_LEFT  &mmv MOVE_DOWN &mmv MOVE_RIGHT  &kp RPAR  &kp TILDE
-&trans     &ctrl_z         &ctrl_x           &ctrl_c           &ctrl_v           &out OUT_BLE    &shift_ins   &trans    &ext_power EP_OFF    &ext_power EP_ON &kp KP_PLUS     &kp LBRC  &kp RBRC  &kp PIPE
+&trans     &ctrl_z         &ctrl_x           &ctrl_c           &ctrl_v           &out OUT_BLE    &shift_ins   &trans    &ext_power EP_OFF    &ext_power EP_ON &alt_left     &alt_right  &kp BSLH  &kp LSHFT
                             &shift_ins          &trans             &trans           &alt_ctrl_del      &alt_enter       &trans   &trans    &trans    &trans    &trans
 			>;
 
@@ -362,16 +386,16 @@
 
 		raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |       |  F1 | F2  |  F3  |  F4  |  F5  |                   |  F6  |   F7  |   F8  |  F9  |   F10 |   F11 |
-// |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  Home |   ^   |  End |   0   |   F12 |
-// |  CTRL |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ->  |  ->   |       |
-// | SHIFT |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   \   | SHIFT |
+// |       |  F1 | F2  |  F3  |  F4  |  F5  |                   |  F6  |   F7  |   F8  |   F9  |   F10 |   F11 |
+// |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  Home |   ^   |   End |   0   |   F12 |
+// |  CTRL |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |   ->  |  ->   |       |
+// | SHIFT |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   | ALT_L | ALT_R |   \   | SHIFT |
 //                     | ALT  | DEL  | ENTER| 		 |  | 		| SPACE| BSPC  | ALT   |
 			bindings = <
 &trans    &kp F1 &kp F2 &kp F3 &kp F4  &kp F5                       &kp F6   &kp F7   &kp F8 &kp F9 &kp F10 &kp F11
 &kp GRAVE &kp N1 &kp N2 &kp N3  &kp N4  &kp N5                      &kp PG_UP  &kp HOME  &kp UP    &kp END   &kp N0    &kp F12
 &kp LCTRL    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                   &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT &kp RIGHT &trans
-&kp LSHFT    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &trans  &trans  &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT  &kp BSLH  &kp LSHFT
+&kp LSHFT    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &trans  &trans  &kp KP_PLUS &kp MINUS &alt_left &alt_right  &kp BSLH  &kp LSHFT
                        &kp N1 &kp LALT &kp DEL &kp RET  &trans  &trans  &kp SPACE  &kp BSPC &kp RALT &kp C_MUTE
 			>;
 
