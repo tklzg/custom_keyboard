@@ -233,7 +233,7 @@
             bindings
                 = <&macro_press &kt LALT>
                 , <&macro_tap &kp TAB>
-                //, <&macro_release &kp LALT>
+                , <&macro_release &kt LALT>
                 ;
         };
 
