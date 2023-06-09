@@ -377,7 +377,7 @@
 &bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &alt_f4 &bt BT_SEL 4                 &trans    &trans    &trans          &trans    &trans    &trans
 &alt_tab     &kp F2           &kp F3            &kp F4            &kp F5       &kp F6                       &mwh SCROLL_UP    &mkp LCLK    &mmv MOVE_UP  &mkp RCLK   &kp F11   &kp F12
 &kp GRAVE  &kp EXCL         &kp AT            &c_v_hom_bs         &c_v_hom_del   &out OUT_USB                    &mwh SCROLL_DOWN &mmv MOVE_LEFT  &mmv MOVE_DOWN &mmv MOVE_RIGHT  &kp RPAR  &kp TILDE
-&trans     &ctrl_z         &ctrl_x           &ctrl_c           &ctrl_v           &out OUT_BLE    &shift_ins   &PSCRN    &ext_power EP_OFF    &ext_power EP_ON &alt_left     &alt_right  &kp BSLH  &kp LSHFT
+&trans     &ctrl_z         &ctrl_x           &ctrl_c           &ctrl_v           &out OUT_BLE    &shift_ins   &kp PSCRN    &ext_power EP_OFF    &ext_power EP_ON &alt_left     &alt_right  &kp BSLH  &kp LSHFT
                             &shift_ins          &trans             &trans           &alt_ctrl_del      &alt_enter       &trans   &trans    &trans    &trans    &trans
 			>;
 
