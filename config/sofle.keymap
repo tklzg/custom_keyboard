@@ -237,6 +237,17 @@
                 ;
         };
 
+        alt_cap: alt_cap {
+            label = "ZM_alt_cap";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp PSCRN>
+                , <&macro_release &kp LALT>
+                ;
+        };
+
         c_v_hom_del: c_v_hom_del {
             label = "ZM_c_v_hom_del";
             compatible = "zmk,behavior-macro";
@@ -371,14 +382,14 @@
 // | BTCLR | BT1  | BT2  |  BT3 |   BT4 |  BT5  |                   |      |       |       |       |       |       |
 // |Alt+Tab|  F2  |  F3  |  F4  |   F5  |  F6   |                   |SCR_UP|L_CLICK|  UP   |R_CLICK|  F11  |  F12  |
 // |   `   |  !   |  @   | C_BS | C_Del | M_USB |                   |SCR_DN|  LEFT |  DOWN |  RIGHT|   )   |   ~   |
-// | SHIFT | Ctr+Z| Ctr+X| Ctr+C| Ctr+V | M_BT  | SH+INS |  | SCR_ST|EX_OFF| EX_ON | ALT_L | ALT_R |   \   | SHIFT |
+// | SHIFT | Ctr+Z| Ctr+X| Ctr+C| Ctr+V | M_BT  | SH+INS |  |ALT_CAP|EX_OFF| EX_ON | ALT_L | ALT_R |   \   | SHIFT |
 //                | LGUI | ALT  |       |A_C_Del| Al+Ent |  |       |      |       |       |       |
 			bindings = <
 &bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &alt_f4 &bt BT_SEL 4                 &trans    &trans    &trans          &trans    &trans    &trans
 &alt_tab     &kp F2           &kp F3            &kp F4            &kp F5       &kp F6                       &mwh SCROLL_UP    &mkp LCLK    &mmv MOVE_UP  &mkp RCLK   &kp F11   &kp F12
 &kp GRAVE  &kp EXCL         &kp AT            &c_v_hom_bs         &c_v_hom_del   &out OUT_USB                    &mwh SCROLL_DOWN &mmv MOVE_LEFT  &mmv MOVE_DOWN &mmv MOVE_RIGHT  &kp RPAR  &kp TILDE
 &trans     &ctrl_z         &ctrl_x           &ctrl_c           &ctrl_v           &out OUT_BLE    &trans   &trans    &ext_power EP_OFF    &ext_power EP_ON &alt_left     &alt_right  &kp BSLH  &kp LSHFT
-                            &shift_ins          &trans             &trans           &alt_ctrl_del      &alt_enter       &trans   &trans    &trans    &trans    &kp PSCRN
+                            &shift_ins          &trans             &trans           &alt_ctrl_del      &alt_enter       &trans   &trans    &trans    &trans    &alt_cap
 			>;
 
 			sensor-bindings = <&rot_lkp &inc_dec_kp PG_UP PG_DN &inc_dec_kp 3 4 &inc_dec_kp 5 6>;
@@ -396,7 +407,7 @@
 &kp GRAVE &kp N1 &kp N2 &kp N3  &kp N4  &kp N5                      &kp PG_UP  &kp HOME  &kp UP    &kp END   &kp N0    &kp F12
 &kp LCTRL    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                   &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT &kp RIGHT &trans
 &kp LSHFT    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &trans  &kp C_MUTE  &kp KP_PLUS &kp MINUS &alt_left &alt_right  &kp BSLH  &kp LSHFT
-                       &trans &kp LALT &kp DEL &kp RET  &trans  &trans  &kp SPACE  &kp BSPC &kp RALT &trans
+                       &trans &kp LALT &kp DEL &kp RET  &trans  &trans  &kp SPACE  &kp BSPC &kp RALT &kp PSCRN
 			>;
 
 			sensor-bindings = <&rot_lkp_t &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp 5 6>;
