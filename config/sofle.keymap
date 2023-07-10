@@ -281,6 +281,17 @@
                 ;
         };
 
+        alt_w_n: alt_w_n {
+            label = "ZM_alt_w_n";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp W &kp N>
+                , <&macro_release &kp LALT>
+                ;
+        };
+
         shift_g: shift_g {
             label = "ZM_shift_g";
             compatible = "zmk,behavior-macro";
