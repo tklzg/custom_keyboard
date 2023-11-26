@@ -429,7 +429,7 @@
 						 &kp LALT  &mo 1 &kp DEL  &kp RET  &kp SPACE &kp BSPC &al 2 RALT &hm LGUI RCTRL 
 			>;
             //sensor-bindings = <&inc_dec_kp N1 N2 &inc_dec_kp N3 N4 &inc_dec_kp N5 N6 &inc_dec_kp N7 N8>;
-			sensor-bindings = <&rot_lkp_b &rot_lkp_t &inc_dec_kp RIGHT LEFT &inc_dec_kp PG_DN PG_UP>;
+			sensor-bindings = <&rot_lkp_t &rot_lkp_b &inc_dec_kp RIGHT LEFT &inc_dec_kp PG_DN PG_UP>;
 		};
 
 		lower_layer {
